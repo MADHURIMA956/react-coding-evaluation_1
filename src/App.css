@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.leftComp {
+  display: inline-block;
+  width: 50%;
+  border: 1px solid red;
+}
+.rightComp {
+  display: inline-block;
+  width: 50%;
+  border: 1px solid red;
+}
