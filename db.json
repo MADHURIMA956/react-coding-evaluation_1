@@ -7,6 +7,38 @@
       "image": "C:\\fakepath\\so-sweet-girl-with-cute-smile.jpg",
       "instructions": "step by step process are below",
       "id": 1
+    },
+    {
+      "title": "Moton Rogan Josh",
+      "ingredients": "moton,oil,onion",
+      "timetocook": "07:55",
+      "image": "C:\\fakepath\\so-sweet-girl-with-cute-smile.jpg",
+      "instructions": "step by step processes are below",
+      "id": 2
+    },
+    {
+      "title": "fish curry",
+      "ingredients": "fish.curd",
+      "timetocook": "04:04",
+      "image": "C:\\fakepath\\so-sweet-girl-with-cute-smile.jpg",
+      "instructions": "step by step processes are shown below",
+      "id": 3
+    },
+    {
+      "title": "chicken soup",
+      "ingredients": "chicken , oil , onion , chilly",
+      "timetocook": "05:55",
+      "image": "C:\\fakepath\\so-sweet-girl-with-cute-smile.jpg",
+      "instructions": "step by step processes are Shown",
+      "id": 4
+    },
+    {
+      "title": "veg cheese ball",
+      "ingredients": "cheese , onion , oil",
+      "timetocook": "08:45",
+      "image": "C:\\fakepath\\so-sweet-girl-with-cute-smile.jpg",
+      "instructions": "step by step processes are shown below",
+      "id": 5
     }
   ]
 }
