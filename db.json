@@ -1,37 +1,12 @@
 {
   "recipeDtata": [
     {
-      "id": 1
-    },
-    {
-      "title": "chicken",
-      "ingredients": "",
-      "timetocook": "",
-      "image": "",
-      "instructions": "",
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "title": "red",
-      "ingredients": "cow",
-      "timetocook": "",
-      "image": "",
-      "instructions": "",
-      "id": 5
-    },
-    {
-      "title": "chicken",
-      "ingredients": "leg",
-      "timetocook": "04:04",
+      "title": "chicken Do peyaza",
+      "ingredients": "Chiken , onion , curd",
+      "timetocook": "08:08",
       "image": "C:\\fakepath\\so-sweet-girl-with-cute-smile.jpg",
-      "instructions": "step by step",
-      "id": 6
+      "instructions": "step by step process are below",
+      "id": 1
     }
   ]
 }

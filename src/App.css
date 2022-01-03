@@ -38,10 +38,10 @@
 }
 .comp {
   height: 100%;
-  width: 40%;
+  width: 38%;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 60px;
   overflow: hidden;
   padding-top: 20px;
   padding: 20px;
@@ -51,14 +51,17 @@
   background-color: #f9d371;
 }
 .rightComp {
-  top: 150px;
-  right: 0;
+  margin-top: 0px;
+  margin-left: 580px;
+  margin-bottom: 50px;
+  padding: 20px;
   background-color: #8843f2;
 }
 input {
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
+  outline: none;
 }
 label {
   padding: 15px 15px 15px 0;
@@ -72,4 +75,8 @@ button {
   width: 100px;
   height: 40px;
   border-radius: 3px;
+}
+.heading {
+  margin: -80;
+  color: #ef2f88;
 }

@@ -5,6 +5,7 @@ import {Show} from "./components/Show";
 function App() {
   return (
     <div className="App">
+        <div className='heading'><h1>Recipe House</h1></div>
      <div>
      <InputForm />
      </div>
