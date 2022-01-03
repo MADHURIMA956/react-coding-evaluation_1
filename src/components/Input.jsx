@@ -15,7 +15,12 @@ export const InputForm = () => {
     useEffect(() => {
         getRecipe()
     },[]);
-
+    let name ,value;
+    const handleInput = (e) => {
+        name = e.target.name
+        value= e.target.value
+        setRecipe({...recipe, [name]:value})
+    }
     const getRecipe = () => {
         fetch("http://localhost:3001/recipeDtata")
         .then((d) => d.json())
@@ -25,19 +30,13 @@ export const InputForm = () => {
     }
 
     const addRecipe = () => {
-        let name,value
-        const payload = {
-            title : recipe,
-            ingredients : recipe,
-            timetocook : recipe, 
-            image:recipe,
-            instructions:recipe
-         
-        
-        };
+     const { title, ingredients,timetocook , image, instructions} = recipe;
+
         fetch("http://localhost:3001/recipeDtata",{
             method:"POST",
-            body : JSON.stringify(payload),
+            body : JSON.stringify({
+                title, ingredients,timetocook , image, instructions
+            }),
             headers:{
                 "content-type" : "application/json"
             }
@@ -51,23 +50,23 @@ export const InputForm = () => {
          <div className="comp leftComp">
          <div>
                  <label htmlFor="title">Title</label><br />
-                 < input value={recipe.title}  onChange={(e) => setRecipe(e.target.value)} type="text" name="title" id="title" placeholder="Enter Title of Recipe" />
+                 < input value={recipe.title}  onChange={handleInput} type="text" name="title" id="title" placeholder="Enter Title of Recipe" />
              </div>
              <div>
                  <label htmlFor="ingredients">Ingredients</label><br />
-                 < input value={recipe.ingredients} onChange={(e) => setRecipe(e.target.value)} type="textarea" name="ingredients" id="ingredients"  />
+                 < input value={recipe.ingredients} onChange={handleInput} type="textarea" name="ingredients" id="ingredients"  />
              </div>
              <div>
                  <label htmlFor="timetocook"> Time to cook</label><br />
-                 < input value={recipe.timetocook} onChange={(e) => setRecipe(e.target.value)} type="time" name="timetocook" id="timetocook"  />
+                 < input value={recipe.timetocook} onChange={handleInput} type="time" name="timetocook" id="timetocook"  />
              </div>
              <div>
                  <label htmlFor="image">Image</label><br />
-                 < input ref={ref} value={recipe.image}  type="file" name="image" id="image"  />
+                 < input ref={ref} value={recipe.image} onChange={handleInput}  type="file" name="image" id="image"  />
              </div>
              <div>
                  <label htmlFor="instructions">Instructions</label><br />
-                 < input value={recipe.instructions} onChange={(e) => setRecipe(e.target.value)} type="textarea" name="instructions" id="instructions"  />
+                 < input value={recipe.instructions} onChange={handleInput} type="textarea" name="instructions" id="instructions"  />
              </div>
              <div>
                  <button onClick={addRecipe}>Add Recipe</button>
