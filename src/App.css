@@ -36,14 +36,40 @@
     transform: rotate(360deg);
   }
 }
-
+.comp {
+  height: 100%;
+  width: 40%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow: hidden;
+  padding-top: 20px;
+  padding: 20px;
+}
 .leftComp {
-  display: inline-block;
-  width: 50%;
-  border: 1px solid red;
+  left: 0;
+  background-color: #f9d371;
 }
 .rightComp {
-  display: inline-block;
+  top: 150px;
+  right: 0;
+  background-color: #8843f2;
+}
+input {
   width: 50%;
-  border: 1px solid red;
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+label {
+  padding: 15px 15px 15px 0;
+  display: inline-block;
+}
+button {
+  margin-top: 20px;
+  background-color: #ef2f88;
+  color: #f9d371;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
 }

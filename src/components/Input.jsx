@@ -25,12 +25,15 @@ export const InputForm = () => {
     }
 
     const addRecipe = () => {
+        let name,value
         const payload = {
             title : recipe,
             ingredients : recipe,
             timetocook : recipe, 
             image:recipe,
             instructions:recipe
+         
+        
         };
         fetch("http://localhost:3001/recipeDtata",{
             method:"POST",
@@ -40,30 +43,30 @@ export const InputForm = () => {
             }
         }).then(() => {
             getRecipe();
-            setRecipe("")
+            setRecipe(" ");
         })
     }
     return (
         <>
-         <div className="leftComp">
+         <div className="comp leftComp">
          <div>
-                 <label htmlFor="title">Title</label>
+                 <label htmlFor="title">Title</label><br />
                  < input value={recipe.title}  onChange={(e) => setRecipe(e.target.value)} type="text" name="title" id="title" placeholder="Enter Title of Recipe" />
              </div>
              <div>
-                 <label htmlFor="ingredients">Ingredients</label>
+                 <label htmlFor="ingredients">Ingredients</label><br />
                  < input value={recipe.ingredients} onChange={(e) => setRecipe(e.target.value)} type="textarea" name="ingredients" id="ingredients"  />
              </div>
              <div>
-                 <label htmlFor="timetocook"> Time to cook</label>
+                 <label htmlFor="timetocook"> Time to cook</label><br />
                  < input value={recipe.timetocook} onChange={(e) => setRecipe(e.target.value)} type="time" name="timetocook" id="timetocook"  />
              </div>
              <div>
-                 <label htmlFor="image">Image</label>
+                 <label htmlFor="image">Image</label><br />
                  < input ref={ref} value={recipe.image}  type="file" name="image" id="image"  />
              </div>
              <div>
-                 <label htmlFor="instructions">Instructions</label>
+                 <label htmlFor="instructions">Instructions</label><br />
                  < input value={recipe.instructions} onChange={(e) => setRecipe(e.target.value)} type="textarea" name="instructions" id="instructions"  />
              </div>
              <div>
@@ -72,19 +75,18 @@ export const InputForm = () => {
          </div>
             
       
-        {
+        {  
+        // <div className="comp rightComp">
             items.map((e) => (
-            <div className="rightComp">
-                <h3>{e.title}</h3>
-                <h3>{e.ingredients}</h3>
-                <h3>{e.timetocook}</h3>
-                <h3>{e.image}</h3>
-                <h3>{e.instructions}</h3>
-            </div>
-            ))
-        }
+             <div className="rightComp"><p>{e.title}</p>
+            <p> {e.ingredients}</p>
+            <p> {e.timetocook}</p>
+            <p> {e.image}</p>
+            <p> {e.instructions}</p></div>
     
-        
-        </>
+            ))
+            /* // </div> */
+        }
+    </>
     )
 }
